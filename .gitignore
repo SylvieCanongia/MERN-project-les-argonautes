@@ -1,0 +1,9 @@
+config/*
+config/.env
+!config/.env.example
+!config/dbConfig.js
+!config/envConfig.js
+
+documents/
+
+node_modules

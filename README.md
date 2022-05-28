@@ -2,8 +2,8 @@
 
 Simple CRUD with MERN stack
 
-A form to help Jason prepare for his Black Sea expedition.
+A form to help Jason list his crew members for his Black Sea expedition.
 
-Un formulaire pour aider Jason à préparer son expédition en mer noire.
+Un formulaire pour aider Jason à lister les membres de son équipage pour son expédition en mer noire.
 
 Stack : MERN, Redux, Sass

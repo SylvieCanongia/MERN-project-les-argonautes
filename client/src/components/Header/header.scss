@@ -1,0 +1,18 @@
+@use './../../styles/utils/vars';
+
+.header {
+  background: #f4f4f4;
+  padding: vars.$space-M;
+  font-weight: vars.$font-weight-bold;
+
+  img {
+    max-width: 96px;
+    margin-inline: vars.$space-base;
+  }
+  
+  h1 {
+    font-size: vars.$font-size-base * 2.5;
+    text-align: center;
+  }
+
+}

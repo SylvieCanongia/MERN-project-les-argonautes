@@ -1,11 +1,15 @@
+import React from 'react';
+import Routes from 'components/Routes';
+import Header from 'components/Header';
+
 import "./app.scss";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello React !</p>
-      </header>
+
+    <div className="app">
+      <Header />
+      <Routes />
     </div>
   );
 }

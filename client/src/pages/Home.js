@@ -1,10 +1,15 @@
 import React from 'react';
+import Form from 'components/Form';
+import Members from 'components/Members';
+import './home.scss';
 
 const Home = () => {
   return (
-    <div>
-      Hello from Home !
-    </div>
+    
+      <main className='home'>
+        <Form />
+        <Members />
+      </main>
   );
 };
 

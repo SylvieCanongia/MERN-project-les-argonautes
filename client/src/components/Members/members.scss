@@ -1,0 +1,19 @@
+@use './../../styles/utils/vars';
+
+.members {
+  &Title {
+    text-align: center;
+    font-size: vars.$font-size-base * 1.6;
+  }
+
+  &List {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: vars.$space-XL;
+  }
+  .memberItem {
+    padding: 0.25em 0;
+    font-size: vars.$font-size-base * 1.1;
+  }
+}

@@ -1,0 +1,24 @@
+@use './../../styles/utils/vars';
+
+.form {
+  &Title {
+    text-align: center;
+    font-size: vars.$font-size-base * 1.6;
+  }
+
+  &NewMember {
+    margin: 2em 0 4em 0;
+    text-align: center;
+    
+  }
+
+  &Label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: vars.$font-size-base * 1.3;
+  }
+
+  &Input {
+    font-size: vars.$font-size-base;
+  }
+}

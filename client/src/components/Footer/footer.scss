@@ -1,0 +1,9 @@
+@use './../../styles/utils/vars';
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  color: vars.$color-white;
+  background: vars.$color-footer-bg;
+  padding: 0.25em 0;
+}

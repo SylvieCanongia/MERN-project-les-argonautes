@@ -14,12 +14,28 @@
 }
 
 html,
-body {
+body,
+#root
+{
   height: 100%;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
   font-family: vars.$font-text;
   font-size: vars.$font-size-base;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 400; // regular
+}
+
+body {
+  margin: 0;
 }
 
 /* disable the instant scrolling for users that have configured
@@ -33,6 +49,12 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 a {

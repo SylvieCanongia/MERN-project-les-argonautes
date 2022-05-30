@@ -2,6 +2,7 @@
 
 
 const env = process.env.NODE_ENV; // 'development' or 'test'
+export const client_url = process.env.CLIENT_URL;
 
 const development = {
   app: {

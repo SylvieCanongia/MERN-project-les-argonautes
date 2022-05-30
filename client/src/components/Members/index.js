@@ -1,33 +1,33 @@
-import React from "react";
-import './members.scss';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { REACT_APP_api_url } from "./../../envConfig.js";
+import MembersView from "./MembersView.js";
+import "./members.scss";
 
 const Members = () => {
-  return (
-    <div className="members">
-      {/* Member list */}
-      <h2 className="membersTitle" >Membres de l'équipage</h2>
-      <section className="membersList">
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-        <div className="memberItem">Eleftheria</div>
-        <div className="memberItem">Gennadios</div>
-        <div className="memberItem">Lysimachos</div>
-      </section>
-    </div>
-  );
+  const [members, setMembers] = useState("");
+
+  useEffect(() => {
+    getAllMembers();
+  }, []);
+
+  const getAllMembers = async () => {
+    // axios.get(`${REACT_APP_api_url}api/post`)
+    await axios({
+      method: "get",
+      url: `${REACT_APP_api_url}api/post`,
+      withCredentials: true,
+    })
+      .then((res) => {
+        // console.log(res.data);
+        const allMembers = res.data;
+        // Add the data to state
+        setMembers(allMembers);
+      })
+      .catch((err) => console.log("Error in getting data : " + err));
+  };
+
+  return <MembersView members={members} />;
 };
 
 export default Members;

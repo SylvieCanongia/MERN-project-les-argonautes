@@ -7,3 +7,7 @@ A form to help Jason list his crew members for his Black Sea expedition.
 Un formulaire pour aider Jason à lister les membres de son équipage pour son expédition en mer noire.
 
 Stack : MERN, Redux, Sass
+
+## Page d'accueil
+
+![Alt](./client/public/img/screenshot-Les%20Argonautes.jpg "Les Argonautes")

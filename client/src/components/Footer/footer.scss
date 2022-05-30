@@ -1,6 +1,7 @@
 @use './../../styles/utils/vars';
 
 .footer {
+  z-index: 10;
   margin-top: auto;
   text-align: center;
   color: vars.$color-white;

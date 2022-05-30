@@ -6,25 +6,25 @@ const Members = () => {
     <div className="members">
       {/* Member list */}
       <h2 className="membersTitle" >Membres de l'équipage</h2>
-      <section class="membersList">
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
-        <div class="memberItem">Eleftheria</div>
-        <div class="memberItem">Gennadios</div>
-        <div class="memberItem">Lysimachos</div>
+      <section className="membersList">
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
+        <div className="memberItem">Eleftheria</div>
+        <div className="memberItem">Gennadios</div>
+        <div className="memberItem">Lysimachos</div>
       </section>
     </div>
   );

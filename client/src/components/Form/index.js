@@ -7,7 +7,7 @@ const Form = () => {
       {/* New member form */}
       <h2 className="formTitle">Ajouter un(e) Argonaute</h2>
       <form className="formNewMember">
-        <label className="formLabel" for="name">Nom de l&apos;Argonaute</label>
+        <label className="formLabel" htmlFor="name">Nom de l&apos;Argonaute</label>
         <input className="formInput" id="name" name="name" type="text" placeholder="Charalampos" />
         <button type="submit">Envoyer</button>
       </form>

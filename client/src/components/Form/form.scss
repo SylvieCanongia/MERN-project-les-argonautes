@@ -1,24 +1,54 @@
 @use './../../styles/utils/vars';
 
 .form {
+  background: vars.$color-7;
+  border-radius: vars.$radius-M;
+  margin: vars.$space-M auto 0;
+  padding: vars.$space-XS 0;
+
   &Title {
     text-align: center;
     font-size: vars.$font-size-base * 1.6;
   }
 
   &NewMember {
-    margin: 2em 0 4em 0;
+    margin: 2em 0 2em 0;
     text-align: center;
     
   }
 
   &Label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: vars.$space-XS;
     font-size: vars.$font-size-base * 1.3;
   }
 
   &Input {
     font-size: vars.$font-size-base;
+    border-radius: vars.$radius-M;
+    height: vars.$size-M;
+    padding: vars.$space-XS vars.$space-S;
+    margin-inline-end: vars.$space-base;
+    box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.418);
+
+    &:focus {
+      box-shadow: 0 0 4px rgba(0, 22, 44, 0.2);
+    }
+  }
+
+
+
+  &Button {
+    background-color: vars.$color-1;
+    border-radius: vars.$radius-M;
+    height: vars.$size-M;
+    padding: vars.$space-base vars.$space-S;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(51, 51, 51, 0.418);
+    transition: 0.3s;
+
+    &:hover {
+      background: vars.$color-4;
+    }
   }
 }

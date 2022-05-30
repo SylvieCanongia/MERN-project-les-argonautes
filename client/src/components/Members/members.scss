@@ -1,6 +1,12 @@
 @use './../../styles/utils/vars';
 
 .members {
+  border: 2px solid vars.$color-1;
+  border-radius: vars.$radius-M;
+  margin-block: vars.$space-M;
+  padding-block-end: vars.$space-M;
+  padding-inline: vars.$space-XL;
+
   &Title {
     text-align: center;
     font-size: vars.$font-size-base * 1.6;
@@ -12,8 +18,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: vars.$space-XL;
   }
+
   .memberItem {
-    padding: 0.25em 0;
     font-size: vars.$font-size-base * 1.1;
+    background: vars.$color-6;
+    border-radius: vars.$radius-L;
+    padding: vars.$space-base vars.$space-XS;
+    margin-block: vars.$space-base;
   }
 }

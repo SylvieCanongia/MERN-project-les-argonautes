@@ -2,14 +2,18 @@
 $font-text: "Roboto", sans-serif;
 
 /* ====== COLORS ====== */
-$color-1: #ff7b77;
-$color-2: #ffd0c4;
-$color-3: rgb(0, 22, 44);
-$color-4: #fdeeee;
+$color-1: hsl(2, 100%, 73%);
+$color-2: hsl(12, 100%, 85%);
+$color-3: hsl(12, 100%, 95%);
+$color-4: hsl(0, 90%, 60%);
+$color-5: rgb(0, 22, 44);
 $color-black: hsl(0deg, 0%, 0%);
 $color-white: hsl(0deg, 0%, 100%);
 $shadow: rgb(219, 218, 218);
 $color-footer-bg: hsl(0, 90%, 70%);
+$color-6: hsl(0, 90%, 80%);
+$color-7: hsl(0, 90%, 90%);
+
 
 /* ====== TYPOGRAPHY ====== */
 $font-size-base: 1em;

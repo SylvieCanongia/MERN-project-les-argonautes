@@ -2,7 +2,7 @@
 
 .footer {
   z-index: 10;
-  margin-top: auto;
+  margin-block-start: vars.$space-XL * 2.3;
   text-align: center;
   color: vars.$color-white;
   background: vars.$color-footer-bg;

@@ -41,7 +41,7 @@ const Form = () => {
           onChange={(e) => setName(e.target.value)}
           value={name}
         />
-        <button type="submit">Envoyer</button>
+        <input type="submit" className="formButton" value="Envoyer" />
       </form>
     </div>
   );

@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 0;
+  // bottom: 0;
 
  // ==== OCEAN WAVES ====
   .ocean {
@@ -10,7 +10,7 @@
     // height of the waves
     width: 100%;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     right: 0;
     overflow-x: hidden;
@@ -59,7 +59,7 @@
     background-size: contain;
     animation: boat 45s linear infinite;
     background-repeat: no-repeat;
-    bottom: 61px;
+    bottom: 11px;
     height: 105px;
     right: 0;
     position: absolute;
@@ -68,15 +68,15 @@
 
   @keyframes boat {
     0% {
-      transform: translate(100%) rotate(0);
+      transform: translate(100%) rotate(2deg);
     }
 
     7% {
-      transform: translate(40%) rotate(3deg);
+      transform: translate(40%) rotate(-6deg);
     }
 
     14% {
-      transform: translate(0) rotate(2deg);
+      transform: translate(0) rotate(3deg);
     }
 
     21% {

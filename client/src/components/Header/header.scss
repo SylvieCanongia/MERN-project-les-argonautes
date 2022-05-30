@@ -9,10 +9,18 @@
     max-width: 96px;
     margin-inline: vars.$space-base;
   }
-  
+
   h1 {
     font-size: vars.$font-size-base * 2.5;
     text-align: center;
+  }
+
+  @media screen and (max-width: 550px) {
+    img {
+      display: block;
+      margin-inline: auto;
+    }
+
   }
 
 }

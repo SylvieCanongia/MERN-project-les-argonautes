@@ -14,7 +14,6 @@
   &NewMember {
     margin: 2em 0 2em 0;
     text-align: center;
-    
   }
 
   &Label {
@@ -36,8 +35,6 @@
     }
   }
 
-
-
   &Button {
     background-color: vars.$color-1;
     border-radius: vars.$radius-M;
@@ -49,6 +46,20 @@
 
     &:hover {
       background: vars.$color-4;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+
+    margin-inline: vars.$space-XS;
+
+    &Input {
+      margin-block-end: vars.$space-XS;
+    }
+
+    &Input,
+    &Button {
+      margin-inline: vars.$space-XS;
     }
   }
 }

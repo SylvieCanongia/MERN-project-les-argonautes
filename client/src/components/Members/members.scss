@@ -26,4 +26,19 @@
     padding: vars.$space-base vars.$space-XS;
     margin-block: vars.$space-base;
   }
+
+  @media screen and (max-width: 970px) {
+    &List {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+
+    margin-inline: vars.$space-XS;
+
+    &List {
+      grid-template-columns: 1fr;
+    }
+  }
 }

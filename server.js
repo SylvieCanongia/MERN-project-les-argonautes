@@ -9,12 +9,13 @@ import mongooseConnect from "./config/dbConfig.js";
 import postRoutes from "./routes/post.routes.js";
 
 // Because the __dirname or __filename global variables are not available in ECMAScript module files.
+// See article at https://bobbyhadz.com/blog/javascript-dirname-is-not-defined-in-es-module-scope
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const { app_port } = envConfig.app;
 // const port for Heroku deployment
-const PORT = app_port;
+// const PORT = app_port;
 
 // transfers the contents of Express
 const app = express();
@@ -47,7 +48,7 @@ if (env === 'production' || env === 'staging') {
  }
 
 // Connect to the server and listen everything on the port
-app.listen(PORT, (err) => {
+app.listen(app_port, (err) => {
   if (err) console.log("Error in server setup");
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server listening on port ${app_port}`);
 });

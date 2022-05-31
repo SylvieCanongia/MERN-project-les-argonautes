@@ -23,7 +23,7 @@ const production = {
     // endpoint: process.env.API_URL
   },
   db: {
-    db_url: process.env.PROD_DB_URL,
+    db_url: String(process.env.PROD_DB_URL),
     db_host: process.env.PROD_DB_HOST,
     db_port: parseInt(process.env.PROD_DB_PORT) || 27017,
     db_name: process.env.PROD_DB_NAME || 'db'

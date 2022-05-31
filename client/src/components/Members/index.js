@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { REACT_APP_api_url } from "./../../envConfig.js";
+import { react_app_api_url } from "./../../envConfig.js";
 import MembersView from "./MembersView.js";
 import "./members.scss";
 
@@ -12,10 +12,10 @@ const Members = () => {
   }, []);
 
   const getAllMembers = async () => {
-    // axios.get(`${REACT_APP_api_url}api/post`)
+    // axios.get(`${react_app__api_url}api/post`)
     await axios({
       method: "get",
-      url: `${REACT_APP_api_url}api/post`,
+      url: `${react_app_api_url}api/post`,
       withCredentials: true,
     })
       .then((res) => {

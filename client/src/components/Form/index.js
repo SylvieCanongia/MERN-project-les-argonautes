@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { REACT_APP_api_url } from "./../../envConfig.js";
+import { react_app_api_url } from "./../../envConfig.js";
 import "./form.scss";
 
 const Form = () => {
@@ -11,7 +11,7 @@ const Form = () => {
 
     await axios({
       method: "post",
-      url: `${REACT_APP_api_url}api/post`,
+      url: `${react_app_api_url}api/post`,
       withCredentials: true,
       data: {
         name,

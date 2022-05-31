@@ -19,7 +19,7 @@ const development = {
 
 const production = {
   app: {
-    app_port: parseInt(process.env.PROD_APP_PORT) || 5000
+    app_port: parseInt(process.env.PORT) || 5000
     // endpoint: process.env.API_URL
   },
   db: {

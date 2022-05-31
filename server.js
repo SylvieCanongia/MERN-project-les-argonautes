@@ -1,13 +1,17 @@
 import { envConfig } from "./config/envConfig.js";
 import { env, client_url } from "./config/envConfig.js";
+import { __dirname } from 'path';
+
 import express from "express";
 import cors from 'cors';
 import mongooseConnect from "./config/dbConfig.js";
 import postRoutes from "./routes/post.routes.js";
 
+
 const { app_port } = envConfig.app;
 // const port for Heroku deployment
 const PORT = app_port;
+const path = require('path');
 
 // transfers the contents of Express
 const app = express();
@@ -34,7 +38,7 @@ app.use("/api/post", postRoutes);
 // if (env === 'production' || env === 'staging') {
 if (env === 'production' || env === 'staging') {
   app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
+  app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
   });
  }

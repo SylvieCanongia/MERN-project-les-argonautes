@@ -1,12 +1,16 @@
 import { envConfig } from "./config/envConfig.js";
 import { env, client_url } from "./config/envConfig.js";
 import { dirname } from 'path';
+import {fileURLToPath} from 'url';
 import path from "path";
 import express from "express";
 import cors from 'cors';
 import mongooseConnect from "./config/dbConfig.js";
 import postRoutes from "./routes/post.routes.js";
 
+// Because the __dirname or __filename global variables are not available in ECMAScript module files.
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const { app_port } = envConfig.app;
 // const port for Heroku deployment

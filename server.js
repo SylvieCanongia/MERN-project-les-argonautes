@@ -6,6 +6,8 @@ import mongooseConnect from "./config/dbConfig.js";
 import postRoutes from "./routes/post.routes.js";
 
 const { app_port } = envConfig.app;
+// const port for Heroku deployment
+const port = app_port;
 
 // transfers the contents of Express
 const app = express();
@@ -37,7 +39,7 @@ if (env === 'production' || env === 'staging') {
  }
 
 // Connect to the server and listen everything on the port
-app.listen(app_port, (err) => {
+app.listen(port, (err) => {
   if (err) console.log("Error in server setup");
-  console.log(`Server listening on port ${app_port}`);
+  console.log(`Server listening on port ${port}`);
 });

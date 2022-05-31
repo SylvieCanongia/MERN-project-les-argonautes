@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 
 const { db_url, } = envConfig.db;
 
-// const mongoDbString = db_url;
-const mongoDbString = process.env.PROD_DB_URL;
+const mongoDbString = db_url;
+// const mongoDbString = process.env.PROD_DB_URL;
 
 const mongooseConnect = mongoose.connect(mongoDbString);
 

@@ -5,7 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start_local": "nodemon -r dotenv-expand/config -r dotenv/config server.js dotenv_config_path=./config/.env"
+    "start_local": "nodemon -r dotenv-expand/config -r dotenv/config server.js dotenv_config_path=./config/.env",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "nodemonConfig": {
     "delay": "3"

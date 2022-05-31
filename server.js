@@ -1,5 +1,5 @@
 import { envConfig } from "./config/envConfig.js";
-import { client_url } from "./config/envConfig.js";
+import { env, client_url } from "./config/envConfig.js";
 import express from "express";
 import cors from 'cors';
 import mongooseConnect from "./config/dbConfig.js";
@@ -27,6 +27,14 @@ app.use(express.urlencoded({ extended: true })); //body parser for html post for
 
 // Routes
 app.use("/api/post", postRoutes);
+
+// For deployment on Heroku
+if (env === 'production' || env === 'staging') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  });
+ }
 
 // Connect to the server and listen everything on the port
 app.listen(app_port, (err) => {

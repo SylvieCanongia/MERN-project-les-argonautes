@@ -21,7 +21,7 @@ const { app_port } = envConfig.app;
 const app = express();
 
 const corsOptions = {
-  origin: '*',
+  origin: client_url,
   credentials: true,
   'allowedHeaders': ['sessionId', 'Content-Type'],
   'exposeHeaders': ['sessionId'],

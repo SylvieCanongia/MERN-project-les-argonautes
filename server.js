@@ -1,6 +1,6 @@
 import { envConfig } from "./config/envConfig.js";
 import { env, client_url } from "./config/envConfig.js";
-import { __dirname } from 'path';
+import { dirname } from 'path';
 
 import express from "express";
 import cors from 'cors';

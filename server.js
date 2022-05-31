@@ -31,6 +31,7 @@ app.use(express.urlencoded({ extended: true })); //body parser for html post for
 app.use("/api/post", postRoutes);
 
 // For deployment on Heroku
+// if (env === 'production' || env === 'staging') {
 if (env === 'production' || env === 'staging') {
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {

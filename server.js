@@ -29,6 +29,7 @@ const corsOptions = {
   'preflightContinue': false
 }
 
+
 // middlewares
 app.use(cors(corsOptions));
 // The two following are for POST and PUT requests because we are sending data

@@ -1,5 +1,5 @@
 import { envConfig } from "./config/envConfig.js";
-import { env, client_url } from "./config/envConfig.js";
+import { env, client_url, client_url_local } from "./config/envConfig.js";
 import { dirname } from 'path';
 import {fileURLToPath} from 'url';
 import path from "path";
@@ -21,14 +21,13 @@ const { app_port } = envConfig.app;
 const app = express();
 
 const corsOptions = {
-  origin: [ "https://mern-project-les-argonautes.herokuapp.com" ],
+  origin: [ client_url, client_url_local ],
   credentials: true,
   'allowedHeaders': ['sessionId', 'Content-Type'],
   'exposeHeaders': ['sessionId'],
   'methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
   'preflightContinue': false
 }
-
 
 // middlewares
 app.use(cors(corsOptions));

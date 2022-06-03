@@ -3,6 +3,8 @@
 
 export const env = process.env.NODE_ENV; // 'development', 'production' or 'test'
 export const client_url = process.env.CLIENT_URL;
+export const client_url_local = process.env.CLIENT_URL_LOCAL;
+
 
 const development = {
   app: {

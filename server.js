@@ -1,10 +1,10 @@
 import { envConfig } from "./config/envConfig.js";
 import { env, client_url, client_url_local } from "./config/envConfig.js";
-import { dirname } from 'path';
-import {fileURLToPath} from 'url';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 import path from "path";
 import express from "express";
-import cors from 'cors';
+import cors from "cors";
 import mongooseConnect from "./config/dbConfig.js";
 import postRoutes from "./routes/post.routes.js";
 
@@ -20,14 +20,16 @@ const { app_port } = envConfig.app;
 // transfers the contents of Express
 const app = express();
 
+// CORS : Croos Origin Resource Sharing
+// HTTP Headers options
 const corsOptions = {
-  origin: [ client_url, client_url_local ],
+  origin: [client_url, client_url_local],
   credentials: true,
-  'allowedHeaders': ['sessionId', 'Content-Type'],
-  'exposeHeaders': ['sessionId'],
-  'methods': 'GET, HEAD, PUT, PATCH, POST, DELETE',
-  'preflightContinue': false
-}
+  allowedHeaders: ["sessionId", "Content-Type"],
+  exposeHeaders: ["sessionId"],
+  methods: "GET, HEAD, PUT, PATCH, POST, DELETE",
+  preflightContinue: false,
+};
 
 // middlewares
 app.use(cors(corsOptions));
@@ -40,12 +42,12 @@ app.use("/api/post", postRoutes);
 
 // For deployment on Heroku
 // if (env === 'production' || env === 'staging') {
-if (env === 'production' || env === 'staging') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+if (env === "production" || env === "staging") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
   });
- }
+}
 
 // Connect to the server and listen everything on the port
 app.listen(app_port, (err) => {

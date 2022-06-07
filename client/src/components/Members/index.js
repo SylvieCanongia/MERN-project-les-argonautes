@@ -27,6 +27,7 @@ const Members = () => {
       .catch((err) => console.log("Error in getting data : " + err));
   };
 
+  // MembersView is the template for displaying data
   return <MembersView members={members} />;
 };
 

@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import { PostModel } from "../models/post.model.js";
 
+// Manages the logic of getting posts from DB and creating post
+// via mongoose
+
 // Get all posts (here all posted names) (GET)
 export const getAllPosts = async (req, res) => {
   try {
@@ -8,6 +11,8 @@ export const getAllPosts = async (req, res) => {
       if (!err) res.status(200).json(posts);
       else console.log("Error cannot get the data : " + err);
     })
+      // the clone() function avoids the error "headers already sent"
+      // that comes from using asynchronous function with 'try... catch...'
       .clone()
       .select()
       .sort({ createdAt: -1 });

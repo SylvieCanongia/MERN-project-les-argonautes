@@ -14,8 +14,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const { app_port } = envConfig.app;
-// const port for Heroku deployment
-// const PORT = app_port;
 
 // transfers the contents of Express
 const app = express();
@@ -41,7 +39,6 @@ app.use(express.urlencoded({ extended: true })); //body parser for html post for
 app.use("/api/post", postRoutes);
 
 // For deployment on Heroku
-// if (env === 'production' || env === 'staging') {
 if (env === "production" || env === "staging") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {

@@ -7,7 +7,9 @@
 
   img {
     max-width: 96px;
-    margin-inline: vars.$space-base;
+    margin-inline-end: vars.$space-base * 1.5;
+    margin-inline-start: (vars.$space-base * 1.5) * -1;
+
   }
 
   h1 {
